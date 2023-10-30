@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
+    <title>Arief's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="bg-gray-100">
 
     <!-- Navigation Bar -->
-    <nav class="bg-gray-800 text-white p-4">
+    <nav class="bg-gray-800 text-white p-4 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-semibold">My Portfolio</h1>
             <button id="toggleMenu" class="lg:hidden">
@@ -27,9 +24,9 @@
                 </svg>
             </button>
             <div id="mobileMenu" class="hidden lg:flex space-x-4">
-                <a href="#home" class="hover:text-gray-300">Home</a>
-                <a href="#projects" class="hover:text-gray-300">Projects</a>
-                <a href="#contact" class="hover:text-gray-300">Contact</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -58,6 +55,26 @@
                     <a href="#" class="text-indigo-600 hover:underline">Learn More</a>
                 </div>
                 <!-- Add more project cards here -->
+                <div class="bg-white rounded shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4">Project 2</h3>
+                    <p class="text-gray-700 mb-6">Description of Project 1. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">Learn More</a>
+                </div>
+                <!-- Project 3-->
+                <div class="bg-white rounded shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4">Project 3</h3>
+                    <p class="text-gray-700 mb-6">Description of Project 1. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">Learn More</a>
+                </div>
+                <!-- Project 4-->
+                <div class="bg-white rounded shadow p-6">
+                    <h3 class="text-xl font-semibold mb-4">Project 1</h3>
+                    <p class="text-gray-700 mb-6">Description of Project 1. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.</p>
+                    <a href="#" class="text-indigo-600 hover:underline">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -67,24 +84,18 @@
         <div class="container mx-auto">
             <h2 class="text-3xl font-semibold text-center mb-8">Contact Me</h2>
             <div class="flex justify-center items-center space-x-4">
-                <a href="mailto:example@example.com"
-                    class="bg-indigo-600 text-white py-2 px-6 rounded hover:bg-indigo-500 transition duration-300">Email</a>
-                <a href="tel:123-456-7890"
-                    class="bg-indigo-600 text-white py-2 px-6 rounded hover:bg-indigo-500 transition duration-300">Call</a>
+                <a href="https://github.com/yourgithubusername" target="_blank" class="text-gray-600 hover:text-gray-900">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yourlinkedinusername" target="_blank"
+                    class="text-gray-600 hover:text-gray-900 ">
+                    <i class="fab fa-linkedin-in fa-3x"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <script>
-        // Toggle mobile menu
-        const toggleButton = document.getElementById('toggleMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        toggleButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
